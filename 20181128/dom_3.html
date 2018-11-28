@@ -1,0 +1,41 @@
+<!doctype html>
+<!--  
+-->
+<html>
+	<head>
+		<title>这是我的第一个网页</title>
+		<meta charset="utf-8">
+		<meta name="keyword" content="关键词">
+		<style></style>
+		<script src="C:\xampp\htdocs\bruce\html/$.js"></script>
+	</head>
+	<body >
+		
+		<input type="text" name="uname" id="n"><br>
+		<div id="d1">hhhhhhh</div>
+		<input type="button" value="打印文本" onclick="show()"><br>
+		<input type="button" value="更改文本" onclick="gai()"><br>
+		<input type="button" value="add" onclick="add()">
+		
+		<script>
+			function show(){
+				//var uname = document.getElementById("n");
+				var uname = $("n");
+				console.log(uname.value);
+			}
+			function gai(){
+				//var uname = document.getElementById("n");
+				var uname = $("n")
+				uname.value="xxxxx"
+			}
+			function add(){
+				var uname= document.getElementById("n");
+				//var d1=document.getElementById("d1");
+				var d1=$("d1");
+				d1.innerHTML="<h1>"+d1.innerHTML+uname.value+"<h1>";
+				
+			}
+	
+		</script>
+	</body>
+</html>

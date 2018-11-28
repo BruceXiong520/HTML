@@ -1,0 +1,56 @@
+<!doctype html>
+<!--  
+-->
+<html>
+	<head>
+		<title>这是我的第一个网页</title>
+		<meta charset="utf-8">
+		<meta name="keyword" content="关键词">
+		<style></style>
+		<script src="../$.js"></script>
+	</head>
+	<body onload="btr_blur()">
+		<p>用户名：<input type="text" id="uname" placeholder="请输入用户名" onfocus="btr_focus()" onblur="btr_blur()"><span id="showMsg"></span></p>
+		<p>密码：<input type="password" id="pwd" placeholder="请输入密码" onfocus="btr_focus()" onblur="btr_blur()"><span id="msg"></span></p>
+		<script>
+			function btr_focus(){
+				var showMsg = $("showMsg");
+				var uname = $("uname").value;
+				var pwd = $("pwd").value;
+				var msg = $("msg");
+				if(!uname){
+					showMsg.innerHTML="请输入用户名6-12位";
+					return;
+				}else{
+					showMsg.innerHTML="用户名可以使用";
+					
+				}
+				if(!pwd){
+					msg.innerHTML="请输入8-12位密码";
+					return;
+				}else{
+					msg.innerHTML="密码可以使用";
+					
+				}
+			}
+			function btr_blur(){
+				var showMsg = $("showMsg");
+				var uname = $("uname").value;
+				var pwd = $("pwd").value;
+				var msg = $("msg");
+				if(!uname){
+					showMsg.innerHTML="用户名不能为空";
+					return;	
+				}else{
+					showMsg.innerHTML="用户名可以使用";
+				}
+				if(!pwd){
+					msg.innerHTML="密码不能为空";
+					return;
+				}else{
+					msg.innerHTML="密码可以使用";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<!--  
+-->
+<html>
+	<head>
+		<title>这是我的第一个网页</title>
+		<meta charset="utf-8">
+		<meta name="keyword" content="关键词">
+		<style></style>
+		<script src="../$.js"></script>
+	</head>
+	<body onload="uname_focus()">
+		用户名称：<input type="text" id="uname" onfocus="uname_focus()" onblur="uname_blur()"><span id="umsg"></span><br>
+
+		用户密码：<input type="password" id="pwd" onfocus="pwd_focus()" onblur="pwd_blur()"><span id="pmsg"></span><br>
+
+		重复密码：<input type="password" id="cpwd" onfocus="cpwd_focus()" onblur="cpwd_blur()"><span id="cpmsg"></span>	
+		<script>
+			function uname_focus(){
+				var uname=$("uname").value;
+				var umsg=$("umsg");
+				if(!uname){
+					umsg.innerHTML="请输入用户名";
+					return;
+				}else{
+					umsg.innerHTML="通过"
+				}
+			}
+			function uname_blur(){
+				var uname=$("uname").value;
+				var umsg=$("umsg");
+				if(!uname){
+					umsg.innerHTML="用户名不能为空";
+					return;
+				}else{
+					umsg.innerHTML="通过"
+				}
+			}
+			function pwd_focus(){
+				var pwd=$("pwd").value;
+				var pmsg=$("pmsg");
+				if(!pwd){
+					pmsg.innerHTML="请输入密码";
+					return;
+				}else{
+					pmsg.innerHTML="通过"
+				}
+			}
+			function pwd_blur(){
+				var pwd=$("pwd").value;
+				var pmsg=$("pmsg");
+				if(!pwd){
+					pmsg.innerHTML="密码不能为空";
+					return;
+				}else{
+					pmsg.innerHTML="通过"
+				}
+			}
+
+			function cpwd_focus(){
+				var pwd=$("pwd").value;
+				var cpwd=$("cpwd").value;
+				var cpmsg=$("cpmsg");
+				if(!cpwd){
+					cpmsg.innerHTML="请输入重复密码！";
+					return;
+				}else if(cpwd==pwd){
+						cpmsg.innerHTML="通过"
+					}
+			}
+			function cpwd_blur(){
+				var pwd=$("pwd").value;
+				var cpwd=$("cpwd").value;
+				var cpmsg=$("cpmsg");
+				if(!cpwd){
+					cpmsg.innerHTML="重复密码不能为空";
+					return;
+				}else if(cpwd!=pwd){
+					cpmsg.innerHTML="密码不对，重新输入";
+				}else{
+					cpmsg.innerHTML="通过"
+				}
+			}
+		</script>
+	</body>
+</html>

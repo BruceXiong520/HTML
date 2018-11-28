@@ -1,0 +1,25 @@
+<!doctype html>
+<!--  
+-->
+<html>
+	<head>
+		<title>这是我的第一个网页</title>
+		<meta charset="utf-8">
+		<style></style>
+		<script></script>
+	</head>
+	<body >
+		<div id="sex">男女公母雌雄</div>
+		<p id="p">男女公母雌雄</p>
+		<p><input type="button"  value="获取p元素" onclick="showEle()"></p>
+		<script>
+			function showEle(){
+				var ele = document.getElementById("sex");
+				console.log(ele);
+				var n = document.getElementById("p");
+				console.log(n.innerHTML);
+				n.innerHTML="123456"
+			}
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<!--  
+-->
+<html>
+	<head>
+		<title>这是我的第一个网页</title>
+		<meta charset="utf-8">
+		<meta name="keyword" content="关键词">
+		<style></style>
+		<script></script>
+	</head>
+	<body >
+		<div id="uname">tomcat</div>
+
+		<input type="button" value="打印" onclick="show()">
+		<input type="button" value="更改" onclick="gai()"><br>
+		<input type="text" name="un" value="dangdang" id="u">
+		<script>
+			function show(){
+			var uname = document.getElementById("uname");
+				uname=uname.innerHTML;
+				console.log(uname);
+			}
+			function gai(){
+				var uname = document.getElementById("uname");
+				uname.innerHTML = "这是我的第一个DOM操作"
+			}
+			var un = document.getElementById("u");
+			un = un.value;
+			console.log(un);
+		</script>
+	</body>
+</html>
